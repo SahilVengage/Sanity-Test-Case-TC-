@@ -1,0 +1,38 @@
+﻿9- Service working hours (CT left hand)
+
+==SETUP START==
+ENVIRONMENT, https://chat-staging.vengage.ai/
+CENTER_ID, 161
+==SETUP END==
+
+==CONVERSATION START==
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> Yes
+AI >>> Could you please specify the [scan requested] by your doctor?
+User >>> CT left hand
+AI >>>  you have requested for [CT left hand scan] . is that correct?
+User >>> Yes
+AI >>> This scan is not fully covered under Medicare. It costs from $100 includes $50 gap. Are you OK to proceed?
+User >>> yes
+AI >>> There's an [additional cost of $150] with a GAP fees of $50. Are you OK to proceed?
+User >>> yes
+AI >>> To ensure the patient health safety, we need to check few things. Please only answer as Yes OR No.. Does patient have[ diabetes]?
+User >>> No
+AI >>> Next question. Is patient allergic to [Iodine Contrast?]
+User >>> No
+AI >>>  Last question. Does patient have any [renal kidney function problem]?
+User No
+AI >>> The earliest available slot is at [08:00 AM tomorrow.] Are you ok to proceed or do you have another preference?
+User >>> yes
+~~CHECK-APPLICABLE-RULE= [SERVICE_AVAILABILITY_RULE:306]
+~~BLOCK-TIME-RANGE:MODALITY=CT, SDATE=TODAY+0, STIME=00:00, ETIME=18:00
+AI >>> Please spell out the first name of the Patient.
+User >>> Sahil 
+AI >>> Please spell out the last name of the Patient.
+User >>> Singhal
+AI >>> What is the patient date of birth?
+User >>> 01012001
+AI >>> The patient date of birth is 1 January, 2001. Is that correct?
+User >>> Yes
+AI >>> Your appointment for c t left hand is confirmed for tomorrow at 08:00 AM . You will receive appointment details along with preparation instructions via SMS. Thanks for calling us.
+==CONVERSATION END==
