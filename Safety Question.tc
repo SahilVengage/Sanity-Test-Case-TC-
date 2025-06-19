@@ -1,0 +1,37 @@
+﻿17  Safety Question (CT Abdomen)
+
+
+==SETUP START==
+ENVIRONMENT, https://chat-staging.vengage.ai/
+CENTER_ID, 161
+==SETUP END==
+
+==CONVERSATION START==
+
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> Yes
+AI >>> Could you please specify the [scan requested] by your doctor?
+User >>> Ct abdomen
+AI >>> you have requested for c t abdomen . is that correct?
+User >>> Yes
+AI>>> Is the patient less than [16 years old?] Please say Yes or No.
+User>>> NO
+AI>>> Have you been referred by [G P or by specialist?]
+User>>>specialist
+AI>>>This scan is not fully covered under Medicare. It [costs from $100 includes $50 gap]. Are you OK to proceed?
+User >>>yes
+~~CHECK-APPLICABLE-RULE= [SAFETY_QUESTIONS_FLOW_RULE:53]
+~~BLOCK-TIME-RANGE:MODALITY=CT, SDATE=TODAY+0, STIME=00:00, ETIME=18:00
+AI >>> The next available slot is on [Monday at 08:30 AM.] Are you ok to proceed or do you have another preference?
+User >>> Yes
+AI >>> AI >>> Please spell out the first name of the Patient.
+User >>> Sahil 
+AI >>> Please spell out the last name of the Patient.
+User >>> Singhal
+AI >>> What is the patient date of birth?
+User >>> 01012001
+AI >>> The patient date of birth is 1 January, 2001. Is that correct?
+User >>> Yes
+AI >>> Your appointment for c t abdomen is confirmed for dated 16 June Monday at 09:00 AM . You will receive appointment details along with preparation instructions via SMS. [Thanks for calling us.]
+AI >>> Hung Up
+==CONVERSATION END==
