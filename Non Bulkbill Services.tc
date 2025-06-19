@@ -1,0 +1,44 @@
+﻿12 - Non Bulkbill Services (CT Calcium Score)
+
+==SETUP START==
+ENVIRONMENT, https://chat-staging.vengage.ai/
+CENTER_ID, 161
+==SETUP END==
+
+==CONVERSATION START==
+
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> yes
+AI >>>Could you please specify the [scan requested] by your doctor?
+User >>> CT chest
+AI >>> you have [requested for c t chest] . is that correct?
+User >>> Yes
+AI >>> The requested scan requires [2 hours of fasting]. Will that be okay with the patient?
+User >>>  Yes
+AI >>> Is the patient less [than 16 years old?] Please say Yes or No.
+User >>> No
+AI >>> Have you been referred by G P or by specialist?
+User >>> specialist
+AI >>> This scan is not [fully covered under Medicare]. It costs from $100 includes $50 gap. Are you OK to proceed?
+User >>> Yes
+AI >>> To ensure the [patient health safety], we need to check few things. Please only answer as Yes OR No.. Does patient have [diabetes]?.
+User >>> No
+AI >>> Next question. Is patient allergic to [Iodine Contrast]?
+User >>> No
+AI >>> Last question. Does patient have any [renal kidney] function problem?
+User >>> No
+~~CHECK-APPLICABLE-RULE=[BULK_BILL_RULE:621]
+~~BLOCK-TIME-RANGE:MODALITY=US, SDATE=TODAY+0, STIME=00:00, ETIME=18:00
+AI >>> The next available slot is on [Monday at 08:00 AM]. Are you ok to proceed or do you have another preference?
+User >>> Yes
+AI >>> AI >>> Please spell out the first name of the Patient.
+User >>> Sahil 
+AI >>> Please spell out the last name of the Patient.
+User >>> Singhal
+AI >>> What is the patient date of birth?
+User >>> 01012001
+AI >>> The patient date of birth is 1 January, 2001. Is that correct?
+User >>> Yes
+AI >>> Your appointment for c t chest is confirmed for dated 16 June Monday at 08:00 AM . You will receive appointment details along with preparation instructions via SMS. Thanks for calling us.
+AI >>> Hang Up
+==CONVERSATION END==
