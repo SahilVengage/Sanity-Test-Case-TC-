@@ -1,0 +1,32 @@
+﻿15 General Instructions (US Left hand)
+
+==SETUP START==
+ENVIRONMENT, https://chat-staging.vengage.ai/
+CENTER_ID, 161
+==SETUP END==
+
+==CONVERSATION START==
+
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> Yes
+AI >>> Could you please specify the [scan requested] by your doctor?
+User >>> U S left hand
+AI>>> you have requested for [U S left hand] . is that correct?
+User >>> Yes
+AI >>> There's an [additional cost of $150] with a GAP fees of $50. Are you OK to proceed?
+User >>> Yes
+~~CHECK-APPLICABLE-RULE=[] - Rules are not showing On OI
+~~BLOCK-TIME-RANGE:MODALITY=US, SDATE=TODAY+0, STIME=00:00, ETIME=18:00
+AI >>> The next available slot is on [Monday at 12:30 PM.] Are you ok to proceed or do you have another preference?
+User >>> Yes
+AI >>> AI >>> Please spell out the first name of the Patient.
+User >>> Sahil 
+AI >>> Please spell out the last name of the Patient.
+User >>> Singhal
+AI >>> What is the patient date of birth?
+User >>> 01012001
+AI >>> The patient date of birth is 1 January, 2001. Is that correct?
+User >>> Yes
+AI >>> Your appointment for U S left hand is confirmed for dated 16 June Monday at 12:30 PM . You will receive appointment details along with preparation instructions via SMS. [Thanks for calling us.]
+AI >>> Hung Up
+==CONVERSATION END==
