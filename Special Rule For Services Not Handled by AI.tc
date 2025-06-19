@@ -1,0 +1,24 @@
+﻿Special Rule For Services Not Handled by AI (US Dating)
+
+==SETUP START==
+ENVIRONMENT, https://chat-staging.vengage.ai/
+CENTER_ID, 161
+==SETUP END==
+
+==CONVERSATION START==
+
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> Yes
+AI >>> Could you please specify the [scan requested] by your doctor?
+User >>> us dating
+AI >>> you have requested for [U S dating scan] . is that correct?
+User >>> yes
+AI >>> Please specify the [number of weeks of pregnancy], on the day you are planning, for the scan.
+User >>> 2
+AI >>> Would you like a [female sonographer] for your scan? This may limit your options.
+User >>> Yes
+~~CHECK-APPLICABLE-RULE= [PROCEDURE_NOT_HANDLED_BY_AI(SPECIAL_RULE):38, ESCALATION_RULE:269] US Dating
+~~BLOCK-TIME-RANGE:MODALITY=CT, SDATE=TODAY+0, STIME=00:00, ETIME=18:00
+
+AI  >>> This [service is not handled by AI], Please wait while I connect you to a representative. Please wait while I connect you to the operator.
+AI >>> Forward Call
