@@ -1,0 +1,20 @@
+﻿WALK IN APPOINTMENT (Xray hand)
+
+
+==SETUP START==
+ENVIRONMENT, https://chat-staging.vengage.ai/
+CENTER_ID, 161
+==SETUP END==
+
+==CONVERSATION START==
+
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> Yes
+AI >>> Could you please specify the [scan requested] by your doctor?
+User >>> CR hand
+AI >>> You have requested for [cr hand]. Is that correct?
+USER >>>  yes
+~~CHECK-APPLICABLE-RULE=[WALKIN_APPOINTMENT:115]
+AI >>> cr is a walk-in service and does not require any prior appointment. Please visit us during business hours and ensure you bring your doctor referral letter. Thank you.
+
+==CONVERSATION END==
