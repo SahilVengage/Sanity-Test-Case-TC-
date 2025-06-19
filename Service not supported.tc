@@ -1,0 +1,12 @@
+==CONVERSATION START==
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> Yes
+AI >>> Could you please specify the [scan requested] by your doctor?
+USER >>> MRI head
+AI >>> You have requested for [mri head]. Is that correct?
+User >>> Yes
+~~CHECK-APPLICABLE-RULE=[SERVICE_NOT_SUPPORTED:856, ESCALATION_RULE:266]
+~~BLOCK-TIME-RANGE:MODALITY=MRI, SDATE=TODAY+0, STIME=00:00, ETIME=18:00
+AI >>> This service is currently [not supported at the center]. Please wait while I connect you to the operator.
+AI >>> Forward Call
+==CONVERSATION END==
