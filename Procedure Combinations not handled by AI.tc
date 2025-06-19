@@ -1,0 +1,19 @@
+﻿Procedure Combinations not handled by AI (US abdomen and US chest)
+
+==SETUP START==
+ENVIRONMENT, https://chat-staging.vengage.ai/
+CENTER_ID, 161
+==SETUP END==
+
+==CONVERSATION START==
+
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> Yes
+AI >>> Could you please specify the [scan requested] by your doctor?
+User >>> 
+AI >>> May I know the [gender] of the patient. Please say either Male OR Female.
+User >>> Male
+~~CHECK-APPLICABLE-RULE= [PROCEDURE_COMBINATION_NOT_HANDLED_BY_AI: 23,ESCALATION_RULE:269] 
+AI >>> This service is [not handled by AI], Please wait while I connect you to a representative. Please wait while I connect you to the operator.
+AI >>> Hung UP
+==CONVERSATION END==
