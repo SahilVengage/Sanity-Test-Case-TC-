@@ -1,0 +1,39 @@
+﻿8- Female sonographer flow (US pelvis)
+
+==SETUP START==
+ENVIRONMENT, https://chat-staging.vengage.ai/
+CENTER_ID, 161
+==SETUP END==
+
+==CONVERSATION START==
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> Yes
+AI >>> Could you please specify the [scan requested] by your doctor?
+User >>> US pelvis
+AI >>> you have requested for [U S pelvis] . is that correct?
+User >>> Yes
+AI >>> May I know the [gender] of the patient. Please say either Male OR Female.
+User >>> Female
+AI >>> Is this scan for [pregnancy]?
+User >>> No
+AI >>> Please specify the [number of weeks of pregnancy], on the day you are planning, for the scan.
+User >>> 18
+AI >>> Would you like a [female sonographer] for your scan? This may limit your options.
+User >>> Yes
+AI >>> There's an [additional cost of $150] with a GAP fees of $50. Are you OK to proceed?
+User >>> Yes
+~~CHECK-APPLICABLE-RULE=[SONOGRAPHER_FLOW_RULE:50]
+~~BLOCK-TIME-RANGE:MODALITY=US, SDATE=TODAY+0, STIME=00:00, ETIME=18:00
+AI >>> The next available slot is on [Monday at 10:00 AM]. Are you ok to proceed or do you have another preference?
+User >> Yes
+AI >>>Please spell out the first name of the Patient.
+User >>> Shivi
+AI >>> Please spell out the last name of the Patient.
+User >>> Singh
+AI >> What is the patient date of birth?
+User >>> 01012001
+AI >>> The patient date of birth is 1 January, 2001. Is that correct?
+User >>> Yes
+AI >>> Your appointment for U S pelvis 18 weeks is confirmed for dated 16 June Monday at 10:00 AM . You will receive appointment details along with preparation instructions via SMS. Thanks for calling us. 
+AI >>> Hang Up
+==CONVERSATION END==
