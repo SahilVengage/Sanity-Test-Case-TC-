@@ -1,0 +1,34 @@
+﻿5- Services Excluded from Preparation Guidelines (US Shoulder)
+
+==SETUP START==
+ENVIRONMENT, https://chat-staging.vengage.ai/
+CENTER_ID, 161
+==SETUP END==
+
+
+==CONVERSATION START==
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> Yes
+AI >>> Could you please specify the [scan requested] by your doctor?
+User >>> US shoulder
+AI >>> You have requested for [US shoulder]. Is that correct?
+User >>> Yes
+AI >>> Is the scan for [Left, or, Right or both]?
+User >>> Left
+AI >>> There's an [additional cost] of $150 with a GAP fees of $50. Are you OK to proceed?
+User >>> yes
+~~CHECK-APPLICABLE-RULE=[SERVICE_EXCLUDED_FROM_PREPARATION_GUIDELINE:11]
+~~BLOCK-TIME-RANGE:MODALITY=US, SDATE=TODAY+0, STIME=00:00, ETIME=18:00
+AI >>> The next available slot is on [Monday at 09:30 AM.] Are you ok to proceed or do you have another preference?
+User >>> yes
+AI >>>  Please spell out the first name of the Patient.
+User >>> Sahil
+AI >>> Please spell out the last name of the Patient.
+User >>> Singhal
+AI >>> What is the patient date of birth?
+User >>> 11091999
+AI >>> The patient date of birth is 11 September, 1999. Is that correct?
+User >>> Yes
+AI >>>Your appointment for U S shoulder left is confirmed for dated 16 June Monday at 08:00 AM . You will receive appointment details along with preparation instructions via SMS. [Thanks for calling us.]
+AI >>> Hang Up
+==CONVERSATION END==
