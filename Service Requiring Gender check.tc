@@ -1,0 +1,32 @@
+﻿4-Service Requiring Gender check (US Pelvis)
+
+==SETUP START==
+ENVIRONMENT, https://chat-staging.vengage.ai/
+CENTER_ID, 161
+==SETUP END==
+
+
+==CONVERSATION START==
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> Yes
+AI >>> Could you please specify the [scan requested] by your doctor?
+User >>> US pelvis
+AI >>> You have requested for [U S pelvis]. Is that correct?
+User >>> Yes
+AI >>> May I know the [gender] of the patient. Please say either Male OR Female.
+User >>> Male
+~~CHECK-APPLICABLE-RULE=[GENDER_CHECK:22]
+~~BLOCK-TIME-RANGE:MODALITY=US, SDATE=TODAY+0, STIME=00:00, ETIME=18:00
+AI >>> The next available slot is on [Monday at 09:30 AM.] Are you ok to proceed or do you have another preference?
+User >>> yes
+AI >>>  Please spell out the first name of the Patient.
+User >>> Sahil
+AI >>> Please spell out the last name of the Patient.
+User >>> Singhal
+AI >>> What is the patient date of birth?
+User >>> 11091999
+AI >>> The patient date of birth is 11 September, 1999. Is that correct?
+User >>> Yes
+AI >>> Your appointment for U S pelvis is confirmed for tomorrow at 11:30 AM . You will receive appointment details along with preparation instructions via SMS. Thanks for calling us.
+AI >>> Hang Up
+==CONVERSATION END==
