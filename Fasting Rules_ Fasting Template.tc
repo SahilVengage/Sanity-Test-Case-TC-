@@ -1,0 +1,37 @@
+﻿13 - Fasting Rules/ Fasting Template (US abdomen)
+
+==SETUP START==
+ENVIRONMENT, https://chat-staging.vengage.ai/
+CENTER_ID, 161
+==SETUP END==
+
+==CONVERSATION START==
+AI >>> [Thanks for calling] Sanity Imaging Single center. Are you looking to book a new appointment?
+User >>> Yes
+AI >>> Could you please specify the [scan requested] by your doctor?
+User >>> US abdo
+AI >>> you have requested for [U S abdomen.] is that correct?
+User >>> Yes
+AI >>> May I know the [gender] of the patient. Please say either Male OR Female.
+User >>> Male
+AI >>> The requested scan [requires 4 hours of fasting]. Will that be okay with the patient?
+User >>> Yes
+AI >>> Is the patient [less than 16 years old?] Please say Yes or No.
+User >>> No
+AI >>> There's an [additional cost of $150] with a GAP fees of $50. Are you OK to proceed?
+User >>> Yes
+~~CHECK-APPLICABLE-RULE= [FASTING_RULE:552]
+~~BLOCK-TIME-RANGE:MODALITY=US, SDATE=TODAY+0, STIME=00:00, ETIME=18:00
+AI >>> The earliest available slot is at [02:30 PM tomorrow.] Are you ok to proceed or do you have another preference?
+User >>> Yes
+AI >>> Please spell out the first name of the Patient.
+User >>> Sahil 
+AI >>> Please spell out the last name of the Patient.
+User >>> Singhal
+AI >>> What is the patient date of birth?
+User >>> 01012001
+AI >>> The patient date of birth is 1 January, 2001. Is that correct?
+User >>> Yes
+AI >>> Your appointment for U S abdomen is confirmed for tomorrow at 02:30 PM . You will receive appointment details along with preparation instructions via SMS. [Thanks for calling us].
+AI >>> Hang Up
+==CONVERSATION END==
